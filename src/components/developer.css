@@ -1,0 +1,49 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .message-container {
+    flex: 1; /* Take up available space */
+    overflow-y: auto; /* Scrollable if messages overflow */
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  .message-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+  }
+  
+  .message-item {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    margin-bottom: 10px; /* Space between messages */
+    background-color: white; /* Message background */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .reply-container {
+    position: sticky;
+    bottom: 0; /* Stick to the bottom of the viewport */
+    background-color: #fff; /* White background */
+    padding: 10px; /* Spacing */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .reply-container textarea {
+    width: calc(100% - 100px); /* Full width minus button */
+    height: 50px; /* Fixed height */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px; /* Inner padding */
+    resize: none; /* Disable resizing */
+  }
+  
+  .reply-container button {
+    height: 50px; /* Match the textarea height */
+    padding: 0 15px; /* Button padding */
+    margin-left: 10px; /* Space between textarea and button */
+  }
+  

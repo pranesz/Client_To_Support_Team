@@ -1,4 +1,3 @@
-// src/components/Register.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -8,48 +7,64 @@ const Register = () => {
     username: '',
     email: '',
     password: '',
-    role: 'customer'
+    role: 'user'  
   });
 
- 
+  const { username, email, password, role } = formData;
   const navigate = useNavigate();
 
-  const { username, email, password, role } = formData;
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
-  
-
-  const onSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/users/register', formData);
-      alert(res.data.msg);
-      navigate('/login');
+      const res = await axios.post('http://localhost:5000/register', formData);
+      console.log(res.data);
+      navigate('/login'); 
     } catch (err) {
-      alert('Error registering user');
+      console.error(err.response.data);
     }
   };
 
   return (
     <div>
-      <h2>Register</h2>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit}>
         <div>
-          <label>Username</label>
-          <input type="text" name="username" value={username} onChange={onChange} required />
+          <label>Username:</label>
+          <input
+            type="text"
+            name="username"
+            value={username}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div>
-          <label>Email</label>
-          <input type="email" name="email" value={email} onChange={onChange} required />
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div>
-          <label>Password</label>
-          <input type="password" name="password" value={password} onChange={onChange} required />
+          <label>Password:</label>
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div>
-          <label>Role</label>
-          <select name="role" value={role} onChange={onChange}>
-            <option value="customer">Customer</option>
+          <label>Role:</label>
+          <select name="role" value={role} onChange={handleChange} required>
+            <option value="user">User</option>
             <option value="developer">Developer</option>
           </select>
         </div>
