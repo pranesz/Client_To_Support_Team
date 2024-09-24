@@ -84,7 +84,7 @@ const UserDashboard = () => {
                 <span>{msg.message }</span>
               </p>
               <p className="reply">
-              <span>Developer :{msg.reply}</span>
+              <span><b>Developer :</b>{msg.reply}</span>
               </p>
             </li>
           ))}
