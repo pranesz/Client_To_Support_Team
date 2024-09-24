@@ -19,7 +19,7 @@ const DeveloperDashboard = () => {
     }
   };
 
-  const handleReplyChange = (value) => {
+  const handleReplyChange = (value) => { 
     setReply(prev => ({ ...prev, [selectedMessageId]: value }));
   };
 
