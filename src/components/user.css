@@ -12,8 +12,7 @@
     color: #4a4a4a;
     font-size: 18px;
     font-weight: 600;
-}
-
+} 
 .conversation-container {
     flex: 1;
     overflow-y: auto;
@@ -47,10 +46,10 @@
     animation: slideInLeft 0.3s ease;
 }
 
-/* .developer-message {
+.developer-message {
     text-align: right;
     animation: slideInRight 0.3s ease;
-} */
+}
 
 .message {
     display: inline-block;
@@ -68,12 +67,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* .developer-message .message {
+.developer-message .message {
     background-color: #d4edda;
     margin-right: 10px;
     border: 1px solid #c3e6cb;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
+}
 
 .message-form {
     display: flex;
@@ -127,7 +126,7 @@
 
 .user-message .reply {
     background-color: #e0ffe0;
-    margin-left:900px;
+    margin-left:10px;
 }
 
 @keyframes fadeIn {
@@ -156,8 +155,13 @@
         transform: translateX(0);
     }
 }
-/*  
-.dashboard-container {
+
+
+
+/* New man */
+ 
+
+/* .dashboard-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -170,8 +174,8 @@
     color: #4a4a4a;
     font-size: 18px;
     font-weight: 600;
-}
-
+} */
+/* 
 .conversation-container {
     flex: 1;
     overflow-y: auto;
@@ -244,6 +248,13 @@
     margin-right: 10px;
     resize: none;
     transition: border 0.3s ease;
+}
+.reply {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffe6e0;
+    margin: 5px 0;
+    text-align: right;
 }
 
 .message-form textarea:focus {

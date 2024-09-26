@@ -1,9 +1,9 @@
 .dashboard-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Full height of the viewport */
-  background-color: #f4f4f9; /* Softer background */
-  font-family: 'Arial', sans-serif; /* Font styling */
+  height: 100vh;
+  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif; 
 }
 
 .message-container {
